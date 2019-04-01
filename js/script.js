@@ -7,9 +7,6 @@ var outputTmp = document.getElementById('textTemp');
 var buttonCes;
 var buttonFht;
 
-// tempCes;
-// tempFht;
-
 
 outputMsg.innerHTML = ' "Click the button! I acout degrees..." ' + '<br><br>' + outputMsg.innerHTML; 
 
@@ -20,17 +17,17 @@ btnCes.addEventListener('click', function() {
 
 	var tempCes = window.prompt('What is the temperature in degrees Celsius?');	
 
+	var tempFht = ((tempCes*1.8)+32);
 
 		if (isNaN(tempCes)) {outputMsg.innerHTML = " It' not a temperature !!! " } 
 
-		else { 
-			  if (tempCes >= 15) {outputMsg.innerHTML = '" It is very nice ..."';
+		else { if (tempCes > 15) {outputMsg.innerHTML = '" It is very nice ..."';}
+			 
+			   else if (tempCes <= 5) {outputMsg.innerHTML = '" Without a hat and scarf you will not get around "';}
 			
-			  } else {
-					if (tempCes <= 5) {outputMsg.innerHTML = '" Without a hat and scarf you will not get around "';
-				    } else {outputMsg.innerHTML = '" Dress up warmer "';}
-			  	}
-			outputTmp.innerHTML = '" Temperature is '+ ((tempCes*1.8)+32) +'  F "';
+			   else {outputMsg.innerHTML = '" Dress up warmer "';}
+	
+   		outputTmp.innerHTML = '" Temperature is '+ tempFht +'  F "';
 		} 
 })
 
@@ -42,14 +39,12 @@ btnFht.addEventListener('click', function() {
 
 		if (isNaN(tempCes)) {outputMsg.innerHTML = " It' not a temperature !!! " } 
 
-		else { 
-			  if (tempCes >= 15) {outputMsg.innerHTML = '" It is very nice ... "';
+		else { if (tempCes > 15) {outputMsg.innerHTML = '" It is very nice ..."';}
+			 
+			   else if (tempCes <= 5) {outputMsg.innerHTML = '" Without a hat and scarf you will not get around "';}
 			
-			  } else {
-					if (tempCes <= 5) {outputMsg.innerHTML = '" Without a hat and scarf you will not get around "';
-				    } else {outputMsg.innerHTML = '" Dress up warmer "';}
-			  	}
+			   else {outputMsg.innerHTML = '" Dress up warmer "';}
+			  	
 			outputTmp.innerHTML = '" Temperature is '+ Math.round(tempCes) +'  C "';
-			
 		} 
 })
