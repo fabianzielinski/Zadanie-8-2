@@ -22,22 +22,18 @@ btnCes.addEventListener('click', function() {
 	var tempFht = ((tempCes * conFactor) + mpWater);
 
 		if (isNaN(tempCes)) {
-
 			outputMsg.innerHTML = " It' not a temperature !!! "; 
 		} 
 
 		else if (tempCes > 15) {
-
 			outputMsg.innerHTML = '" It is very nice ..."'; 
 		}
 			 
 	    else if (tempCes <= 5) {
-
 	    	outputMsg.innerHTML = '" Without a hat and scarf you will not get around "'; 
 	    }
 	
 	    else {
-
 	    	outputMsg.innerHTML = '" Dress up warmer "'; 
 	    }
 	
@@ -51,22 +47,18 @@ btnFht.addEventListener('click', function() {
 	var	tempCes = ((tempFht - mpWater) / conFactor);
 
 		if (isNaN(tempCes)) {
-
 			outputMsg.innerHTML = " It' not a temperature !!! "; 
 		} 
 
 		else if (tempCes > 15) {
-
 			outputMsg.innerHTML = '" It is very nice ..."'; 
 		}
 			 
 	    else if (tempCes <= 5) {
-
 	    	outputMsg.innerHTML = '" Without a hat and scarf you will not get around "'; 
 	    }
 	
 	    else {
-
 	    	outputMsg.innerHTML = '" Dress up warmer "'; 
 	    }
 	  	
