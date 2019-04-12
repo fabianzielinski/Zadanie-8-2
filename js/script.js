@@ -23,19 +23,19 @@ btnCes.addEventListener('click', function() {
 
 		if (isNaN(tempCes)) {
 			outputMsg.innerHTML = " It' not a temperature !!! "; 
-		};
+		}
 
 		else if (tempCes > 15) {
 			outputMsg.innerHTML = '" It is very nice ..."'; 
-		};
+		}
 			 
 	    else if (tempCes <= 5) {
 	    	outputMsg.innerHTML = '" Without a hat and scarf you will not get around "'; 
-	    };
+	    }
 	
 	    else {
 	    	outputMsg.innerHTML = '" Dress up warmer "'; 
-	    };
+	    }
 	
    		outputTmp.innerHTML = '" Temperature is '+ Math.round(tempFht) +'  F "';	 
 });
@@ -48,19 +48,19 @@ btnFht.addEventListener('click', function() {
 
 		if (isNaN(tempCes)) {
 			outputMsg.innerHTML = " It' not a temperature !!! "; 
-		}; 
+		} 
 
 		else if (tempCes > 15) {
 			outputMsg.innerHTML = '" It is very nice ..."'; 
-		};
+		}
 			 
 	    else if (tempCes <= 5) {
 	    	outputMsg.innerHTML = '" Without a hat and scarf you will not get around "'; 
-	    };
+	    }
 	
 	    else {
 	    	outputMsg.innerHTML = '" Dress up warmer "'; 
-	    };
+	    }
 	  	
 		outputTmp.innerHTML = '" Temperature is '+ Math.round(tempCes) +'  C "';
 });
