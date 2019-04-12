@@ -21,23 +21,17 @@ btnCes.addEventListener('click', function() {
 
 	var tempFht = ((tempCes * conFactor) + mpWater);
 
-		if (isNaN(tempCes)) {
-			outputMsg.innerHTML = " It' not a temperature !!! "; 
-		}
+	if (isNaN(tempCes)) {
+		outputMsg.innerHTML = " It' not a temperature !!! "; 
+	} else if (tempCes > 15) {
+		outputMsg.innerHTML = '" It is very nice ..."'; 
+	} else if (tempCes <= 5) {
+    	outputMsg.innerHTML = '" Without a hat and scarf you will not get around "'; 
+    } else { 
+    	outputMsg.innerHTML = '" Dress up warmer "'; 
+    }
 
-		else if (tempCes > 15) {
-			outputMsg.innerHTML = '" It is very nice ..."'; 
-		}
-			 
-	    else if (tempCes <= 5) {
-	    	outputMsg.innerHTML = '" Without a hat and scarf you will not get around "'; 
-	    }
-	
-	    else {
-	    	outputMsg.innerHTML = '" Dress up warmer "'; 
-	    }
-	
-   		outputTmp.innerHTML = '" Temperature is '+ Math.round(tempFht) +'  F "';	 
+		outputTmp.innerHTML = '" Temperature is '+ Math.round(tempFht) +'  F "';	 
 });
 
 btnFht.addEventListener('click', function() {
@@ -46,21 +40,15 @@ btnFht.addEventListener('click', function() {
 
 	var	tempCes = ((tempFht - mpWater) / conFactor);
 
-		if (isNaN(tempCes)) {
-			outputMsg.innerHTML = " It' not a temperature !!! "; 
-		} 
-
-		else if (tempCes > 15) {
-			outputMsg.innerHTML = '" It is very nice ..."'; 
-		}
-			 
-	    else if (tempCes <= 5) {
-	    	outputMsg.innerHTML = '" Without a hat and scarf you will not get around "'; 
-	    }
+	if (isNaN(tempCes)) {
+		outputMsg.innerHTML = " It' not a temperature !!! "; 
+	} else if (tempCes > 15) {
+		outputMsg.innerHTML = '" It is very nice ..."'; 
+	} else if (tempCes <= 5) {
+    	outputMsg.innerHTML = '" Without a hat and scarf you will not get around "'; 
+    } else {
+    	outputMsg.innerHTML = '" Dress up warmer "'; 
+    }
 	
-	    else {
-	    	outputMsg.innerHTML = '" Dress up warmer "'; 
-	    }
-	  	
-		outputTmp.innerHTML = '" Temperature is '+ Math.round(tempCes) +'  C "';
+	outputTmp.innerHTML = '" Temperature is '+ Math.round(tempCes) +'  C "';
 });
